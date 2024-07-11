@@ -15,7 +15,9 @@ from time import time
 from math import sqrt
 from tkinter import *
 from random import *
+
 import pygame
+pygame.init()
 
 frame_rate = 15
 asteroid_chance = 5
@@ -289,6 +291,9 @@ Set the volume level of the background music using the pygame.mixer.music.set_vo
 """
 
 # write your code here
+pygame.mixer.music.load('space_music.mp3')
+pygame.mixer.music.play(-1)
+pygame.mixer.music.set_volume(0.1)
 
 window.after(frame_rate, create_asteroid)
 window.after(frame_rate, move_asteroids)
