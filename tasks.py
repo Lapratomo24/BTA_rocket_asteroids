@@ -10,6 +10,11 @@ Import all (use *) functions from the random module to have access to them witho
 
 # write your code here
 
+import sys
+from time import time
+from math import sqrt
+from tkinter import *
+from random import *
 from tkinter import messagebox
 import pygame
 
@@ -41,7 +46,10 @@ Set the title of the window to "BTA Rocket".
 """
 
 # write your code here
-
+height = 700
+width = 1400
+window = Tk()
+window.title = "BTA Rocket"
 
 """
 Task 3: Creating the Canvas and Background
@@ -59,6 +67,9 @@ anchor=NW: anchor the image to the northwest corner of the canvas.
 """
 
 # write your code here
+c = Canvas(window, width=width, height=height, bg='blue')
+background_img = PhotoImage(file='background.png')
+c.create_image(0, -150, image=background_img, anchor=NW)
 
 c.pack()
 rocket_r = 30
@@ -81,6 +92,7 @@ anchor=NW: anchor the image to the northwest corner of the canvas.
 """
 
 # write your code here
+
 
 c.move(rocket_oval, mid_x, mid_y)
 c.move(rocket_image, mid_x, mid_y)
