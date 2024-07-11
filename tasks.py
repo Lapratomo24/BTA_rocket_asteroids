@@ -144,10 +144,20 @@ Code Explanation:
 - rocket_speed: Represents the speed at which the rocket moves in pixels per event trigger.
 """
 
-# def move_rocket(event):
-
 # write your code here
-
+def move_rocket(event):
+    if event.keysym == 'Up':
+        c.move(rocket_image, 0, -rocket_speed)
+        c.move(rocket_oval, 0, -rocket_speed)
+    elif event.keysym == 'Down':
+        c.move(rocket_image, 0, rocket_speed)
+        c.move(rocket_oval, 0, rocket_speed)
+    elif event.keysym == 'Left':
+        c.move(rocket_image, -rocket_speed, 0)
+        c.move(rocket_oval, -rocket_speed, 0)
+    elif event.keysym == 'Right':
+        c.move(rocket_image, rocket_speed, 0)
+        c.move(rocket_oval, rocket_speed, 0)
 
 def create_asteroid():
     x = width
