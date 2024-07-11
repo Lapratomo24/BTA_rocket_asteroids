@@ -93,7 +93,7 @@ anchor=NW: anchor the image to the northwest corner of the canvas.
 """
 
 # write your code here
-rocket_img = PhotoImage(file='rocket')
+rocket_img = PhotoImage(file='rocket.png')
 rocket_oval = c.create_oval(20, 44, 148, 84, outline='red')
 rocket_image = c.create_image(-80, -5, image=rocket_img, anchor=NW)
 
