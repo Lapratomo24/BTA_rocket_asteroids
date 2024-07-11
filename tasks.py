@@ -15,7 +15,6 @@ from time import time
 from math import sqrt
 from tkinter import *
 from random import *
-from tkinter import messagebox
 import pygame
 
 frame_rate = 15
@@ -92,7 +91,9 @@ anchor=NW: anchor the image to the northwest corner of the canvas.
 """
 
 # write your code here
-
+rocket_image = PhotoImage(file='rocket')
+rocket_oval = c.create_oval(20, 44, 148, 84, outline='red')
+c.create_image(-80, -5, image=rocket_image, anchor=NW)
 
 c.move(rocket_oval, mid_x, mid_y)
 c.move(rocket_image, mid_x, mid_y)
