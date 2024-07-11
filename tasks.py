@@ -91,9 +91,9 @@ anchor=NW: anchor the image to the northwest corner of the canvas.
 """
 
 # write your code here
-rocket_image = PhotoImage(file='rocket')
+rocket_img = PhotoImage(file='rocket')
 rocket_oval = c.create_oval(20, 44, 148, 84, outline='red')
-c.create_image(-80, -5, image=rocket_image, anchor=NW)
+rocket_image = c.create_image(-80, -5, image=rocket_img, anchor=NW)
 
 c.move(rocket_oval, mid_x, mid_y)
 c.move(rocket_image, mid_x, mid_y)
@@ -113,6 +113,10 @@ fill='white': the text color.
 """
 
 # write your code here
+c.create_text(50, 30, text='Time', fill='white')
+c.create_text(150, 30, text='score', fill='white')
+time_text = c.create_text(50, 50, fill='white')
+score_text = c.create_text(150, 50, fill='white')
 
 additional_time_label = Label(window)
 
